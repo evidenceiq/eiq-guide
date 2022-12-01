@@ -6,7 +6,11 @@
 
 ## For windows
 
-Run `assistantservice.exe`
+Run 
+```sh
+assistantservice.exe
+```
+
 
 When console ask
 
@@ -29,11 +33,14 @@ Enter service password [Enter without type for empty password]: type the passwor
 ```
 <b>Install service</b>
 
-Run `install-service.bat` 
-
+```cmd
+install-service.bat
+```
 <b>Start service</b> 
 
-Run `start-service.bat` 
+```sh
+start-service.bat
+```
 
 <b>Check service</b>  
 
