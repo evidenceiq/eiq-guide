@@ -1,6 +1,6 @@
 # Packages path
 
-.../BUILD/SERVICE/PARTS/AssistantService/AssistantService.2.0.7
+.../BUILD/2.0.7
 
 # Installation
 
