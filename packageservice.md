@@ -4,6 +4,8 @@
 
 ## Collect folders path
 
+`Only put ZIP file into there`
+
 #### Normal
 
 ```sh
