@@ -24,3 +24,14 @@
 
 *Pro (via VPN)*: [http://10.235.235.100:4112](http://10.235.235.100:4112)
 
+## Format Version file (version.json)
+
+Location: same level EXE(service) or Bin folder (web)
+
+```json
+{
+    "Name": "Name of web/service",
+    "Version": "5.3.10",
+    "Description": "Fix bug...."
+}
+```
