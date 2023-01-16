@@ -1,4 +1,4 @@
-# Package paths
+# Proxy web on IIS
 
 ## Components:
 
