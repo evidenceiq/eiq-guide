@@ -1,6 +1,6 @@
 # Packages path
 
-.../BUILD/2.0.7
+.../BUILD/2.1.4
 
 # Installation
 
@@ -81,32 +81,3 @@ sudo ./start-service
 
 <b>Check service</b>  
 Go to url [http://localhost:4051](http://localhost:4051)
-
-# Update (via VPN)
-
-
-
-## Services
-
-`POST` [ASSISTANT_URL](http://localhost:4051)[/api/update/service](api/update/service)
-
-Request Body:
-
-```json
-[
-    {
-        "name": "BSImportService",
-        "path": "https://14.161.7.248:4431/ballisticsearch/updateus/Sandbox/2022/12/2022-12-09/BSImportService.5.3.9.zip",
-    }
-]
-```
-
-Response:
-
-Success:
-```json
-{
-    "MessageCode": "0002",
-    "Message": "Success"
-}
-```
