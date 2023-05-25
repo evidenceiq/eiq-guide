@@ -1,6 +1,6 @@
 # Packages path
 
-.../BUILD/2.1.4
+.../build/assistantservice.2.1.4
 
 # Installation
 
