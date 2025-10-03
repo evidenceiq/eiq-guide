@@ -118,55 +118,45 @@ graph LR
     class ENG,USERS external
 ```
 
-## 🌟 Communication Services Layer
+## Communication Services Layer
 ```mermaid
 graph TB
-    subgraph CLIENT ["🖥️ Client Layer"]
-        direction TB
-        WEB["🌐 Web Interface<br/>────────────<br/>Interactive Portal"]
-        API_CLIENT["📱 API Client<br/>────────────<br/>External Integration"]
+    subgraph "Client Layer"
+        WEB[Web Interface]
+        API_CLIENT[API Client]
     end
     
-    subgraph COMM ["⚡ Communication Services"]
-        direction TB
-        BRDB["🗄️ bsremotedbservice<br/>═══════════════<br/>💾 Database Access Layer<br/>📊 Data Retrieval & Storage"]
-        BAPI["🚪 biqapiservice<br/>═══════════════<br/>🔗 API Gateway<br/>🔐 Authentication & Routing"]
-        EIQ["🛠️ eiqhelperservice<br/>═══════════════<br/>⚙️ Helper Services<br/>📄 Real-time Processing"]
+    subgraph "Communication Services"
+        BRDB[bsremotedbservice<br/>Database Access]
+        BAPI[biqapiservice<br/>API Gateway]
+        EIQ[eiqhelperservice<br/>Helper Services]
     end
     
-    subgraph DATA ["💽 Data & Processing Layer"]
-        direction TB
-        DB[("🗃️ Database<br/>────────<br/>📈 Persistent Storage<br/>🔍 Query Engine")]
-        PDF["📋 PDF Reports<br/>────────────<br/>📊 Generated Documents<br/>📤 Export Ready"]
-        IMG_PROC["🖼️ Image Processing<br/>═══════════════<br/>🎯 Pattern Matching<br/>🔐 MFA Authentication<br/>📸 Real-time Analysis"]
+    subgraph "Data & Processing"
+        DB[(Database)]
+        PDF[PDF Reports]
+        IMG_PROC[Image Processing<br/>Pattern Matching<br/>MFA Flow]
     end
     
-    %% Enhanced Connections with Labels
-    WEB -.->|"🔄 Web Requests"| BRDB
-    WEB -.->|"⚡ Helper Calls"| EIQ
-    API_CLIENT -.->|"📡 API Calls"| BAPI
+    WEB --> BRDB
+    WEB --> EIQ
+    API_CLIENT --> BAPI
     
-    BRDB ==>|"💾 Data Queries"| DB
-    BAPI ==>|"🔍 API Queries"| DB
-    EIQ ==>|"📊 Data Access"| DB
-    EIQ ==>|"📄 Generate"| PDF
-    EIQ ==>|"🎨 Process"| IMG_PROC
+    BRDB --> DB
+    BAPI --> DB
+    EIQ --> DB
+    EIQ --> PDF
+    EIQ --> IMG_PROC
     
-    %% Beautiful Styling
-    classDef client fill:#e8f8f5,stroke:#2e7d32,stroke-width:3px,color:#1b5e20,stroke-dasharray: 5 5
-    classDef service fill:#e3f2fd,stroke:#1565c0,stroke-width:3px,color:#0d47a1,box-shadow: 0 4px 8px rgba(0,0,0,0.1)
-    classDef data fill:#fce4ec,stroke:#c2185b,stroke-width:3px,color:#880e4f,border-radius:10px
-    classDef processing fill:#fff8e1,stroke:#f57c00,stroke-width:3px,color:#e65100,stroke-dasharray: 10 5
-    classDef subgraphStyle fill:#f8f9fa,stroke:#6c757d,stroke-width:2px,color:#495057
+    classDef client fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef service fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef data fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef processing fill:#fff3e0,stroke:#e65100,stroke-width:2px
     
-    %% Apply Styles
     class WEB,API_CLIENT client
     class BRDB,BAPI,EIQ service
     class DB,PDF data
     class IMG_PROC processing
-    
-    %% Subgraph Styling
-    class CLIENT,COMM,DATA subgraphStyle
 ```
 
 ## Component Responsibilities
